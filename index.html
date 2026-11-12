@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Quest - Puzzle Game</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>⚡ CODE QUEST</h1>
+<p>Challenge your brain. Master programming logic.</p>
+</header>
+
+<div class="stats">
+  <div class="stat">
+    <h2 id="score">0</h2>
+    <p>Score</p>
+  </div>
+  <div class="stat">
+    <h2 id="timer">60</h2>
+    <p>Time Left</p>
+  </div>
+  <div class="stat">
+    <h2 id="level">1</h2>
+    <p>Question</p>
+  </div>
+</div>
+
+<div class="game">
+
+<div class="top">
+<select id="difficulty" onchange="changeDifficulty()">
+<option value="easy">Easy</option>
+<option value="medium">Medium</option>
+<option value="hard">Hard</option>
+</select>
+
+<button class="primary" onclick="restartGame()">
+↻ Restart Game
+</button>
+</div>
+
+<div id="progress"><div id="bar"></div></div>
+
+<h2 class="question" id="question">
+Loading puzzle...
+</h2>
+
+<div class="code" id="code"></div>
+
+<div class="answers" id="answers"></div>
+
+<div id="feedback"></div>
+
+<div class="controls">
+<button class="hint" onclick="showHint()">💡 Show Hint</button>
+<button class="primary" onclick="nextQuestion()">Next Puzzle →</button>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
